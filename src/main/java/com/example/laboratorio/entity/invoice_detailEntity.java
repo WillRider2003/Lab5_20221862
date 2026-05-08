@@ -3,15 +3,17 @@ package com.example.laboratorio.entity;
 import jakarta.persistence.*;
 import lombok.*;
 @Entity
-@Table(name = "product")
+@Table(name = "invoice_detail")
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class productEntity {
+
+public class invoice_detailEntity {
     @Id
     private Long id;
-    @Column(name = "name")
-    private String firstName;
+    private int invoice_id;
+    private int product_id;
+    private int quantity;
     private Double price;
-    private int stock;
+    private Double subtotal;
 }
